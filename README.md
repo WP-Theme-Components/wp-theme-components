@@ -1,1 +1,1 @@
-# wp-theme-components
+# WP Theme Components theme

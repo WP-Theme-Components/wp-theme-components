@@ -28,6 +28,37 @@ Template: twentytwenty
 	display: none;
 }
 
+.schema-faq {}
+
+.schema-faq-section p:last-child {
+	margin-bottom: 0;
+}
+
+.schema-faq-section + .schema-faq-section {
+	margin-top: 1em;
+}
+
+.schema-faq-question {
+	cursor: pointer;
+	font-size: 1.5em;
+}
+.schema-faq-question::before {
+	content: "\f522";
+	display: inline-block;
+	font-family: Dashicons;
+	vertical-align: bottom;
+	margin-right: 8px;
+	transition: .4s ease transform;
+}
+
+.schema-faq-question--active::before {
+	transform: rotate( 90deg );
+}
+
+.schema-faq-answer {
+	display: none;
+}
+
 @media ( min-width: 1220px ) {
 	.cover-header h1 {
 		font-size: 6.4rem;

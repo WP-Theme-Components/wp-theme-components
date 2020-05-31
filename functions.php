@@ -38,3 +38,27 @@ function wp_theme_components_faq_script() {
 }
 
 add_action( 'wp_footer', 'wp_theme_components_faq_script' );
+
+/**
+ * Include other PHP files
+ */
+function wp_theme_components_files() {
+	require_once 'components.php';
+}
+
+add_action( 'after_setup_theme', 'wp_theme_components_files', -1000 );
+
+/**
+ * Change the archive title for EDD downloads
+ *
+ * @param string $title Archive title.
+ * @return
+ */
+function wp_theme_components_downloads_archive_title( $title ) {
+	if ( is_post_type_archive( 'download' ) ) {
+		$title = 'Components Directory';
+	}
+	return $title;
+}
+
+add_filter( 'get_the_archive_title', 'wp_theme_components_downloads_archive_title', 11 );

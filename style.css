@@ -59,15 +59,81 @@ Template: twentytwenty
 	display: none;
 }
 
-@media ( min-width: 1220px ) {
-	.cover-header h1 {
-		font-size: 6.4rem;
-	}
+.post-type-archive-download .type-download.hentry {
+	width: 100%;
+	display: flex;
+	text-align: left;
+	padding: 2rem;
+	flex-direction: column;
+}
+
+.post-type-archive-download .type-download.hentry > div:last-child {
+	margin-top: auto;
+}
+
+.post-type-archive-download .type-download.hentry .entry-title {
+	margin: 0;
+	font-size: 4rem;
+}
+
+.post-type-archive-download .type-download.hentry .post-inner {
+	padding-top: 2rem;
+}
+
+.post-type-archive-download .archive-header {
+	width: 100%;
+}
+
+.post-type-archive-download main {
+	display: flex;
+	flex-wrap: wrap;
+	padding-left: 2rem;
+	padding-right: 2rem;
+}
+
+.post-type-archive-download .footer-nav-widgets-wrapper {
+	margin-top: 0;
+}
+
+.edd_free_link::before {
+	content: "\f316";
+	font-family: Dashicons;
+	vertical-align: middle;
+}
+
+.edd_free_link + .edd-github {
+	margin-left: 2rem;
+	display: inline-block;
+}
+
+.repo-submit .ginput_container::before {
+	content: "https://github.com/";
+    display: inline-block;
+}
+
+.repo-submit .ginput_container input {
+	display: inline-block;
 }
 
 @media ( min-width: 700px ) {
 	.footer-menu {
 		font-size: 1.8rem;
+	}
+	.post-type-archive-download .type-download.hentry {
+		width: 50%;
+	}
+}
+
+@media ( min-width: 1220px ) {
+	.cover-header h1 {
+		font-size: 6.4rem;
+	}
+	.post-type-archive-download .type-download.hentry {
+		width: 25%;
+	}
+	.post-type-archive-download main {
+		padding-left: 8rem;
+		padding-right: 8rem;
 	}
 }
 

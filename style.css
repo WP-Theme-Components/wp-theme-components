@@ -116,6 +116,10 @@ Version: 20200531
 	display: inline-block;
 }
 
+ul.primary-menu {
+	align-items: center;
+}
+
 @media ( min-width: 700px ) {
 	.footer-menu {
 		font-size: 1.8rem;

@@ -57,7 +57,7 @@ get_header();
 
 		while ( have_posts() ) {
 			$i++;
-			
+
 			the_post();
 
 			get_template_part( 'template-parts/archive', get_post_type() );

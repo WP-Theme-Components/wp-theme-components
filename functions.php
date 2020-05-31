@@ -52,7 +52,7 @@ add_action( 'after_setup_theme', 'wp_theme_components_files', -1000 );
  * Change the archive title for EDD downloads
  *
  * @param string $title Archive title.
- * @return
+ * @return string
  */
 function wp_theme_components_downloads_archive_title( $title ) {
 	if ( is_post_type_archive( 'download' ) ) {
@@ -62,3 +62,14 @@ function wp_theme_components_downloads_archive_title( $title ) {
 }
 
 add_filter( 'get_the_archive_title', 'wp_theme_components_downloads_archive_title', 11 );
+
+/**
+ * Redirect single downloads to the archive for now
+ */
+function wp_theme_components_redirect_single_download() {
+	if ( is_singular( 'download' ) ) {
+		wp_safe_redirect( get_post_type_archive_link( 'download' ) );
+	}
+}
+
+add_action( 'template_redirect', 'wp_theme_components_redirect_single_download' );

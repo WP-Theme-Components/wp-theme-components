@@ -37,7 +37,7 @@ get_header();
 			<div class="archive-header-inner section-inner medium">
 
 				<?php if ( $archive_title ) { ?>
-					<h1 class="archive-title"><?php echo wp_kses_post( $archive_title ); ?></h1>
+					<h1 class="entry-title"><?php echo wp_kses_post( $archive_title ); ?></h1>
 				<?php } ?>
 
 				<?php if ( $archive_subtitle ) { ?>

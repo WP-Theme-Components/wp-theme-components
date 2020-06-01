@@ -73,3 +73,13 @@ function wp_theme_components_redirect_single_download() {
 }
 
 add_action( 'template_redirect', 'wp_theme_components_redirect_single_download' );
+
+function wp_theme_components_post_type_args( $args, $post_type ) {
+	if ( 'download' === $post_type ) {
+		$args['has_archive']     = 'directory';
+		$args['rewrite']['slug'] = 'component';
+	}
+	return $args;
+}
+
+add_filter( 'register_post_type_args', 'wp_theme_components_post_type_args', 10, 2 );

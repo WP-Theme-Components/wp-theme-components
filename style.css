@@ -120,6 +120,12 @@ ul.primary-menu {
 	align-items: center;
 }
 
+.button:hover,
+.button:focus {
+	text-decoration: none !important;
+	opacity: .8;
+}
+
 body .primary-menu > li > a.button {
 	box-shadow: 0 6px 12px 0 rgba(0,0,0,0.2);
 	color: #fff;

@@ -30,7 +30,7 @@
 			$repo = get_field( 'git_repo' );
 			if ( ! empty( $repo ) ) {
 				printf(
-					'<a href="https://github.com/%1$s" class="edd-github">GitHub</a>',
+					'<a href="https://github.com/%1$s" class="edd-github" target="_blank" rel="noopener">GitHub</a>',
 					esc_attr( $repo )
 				);
 			}
